@@ -31,7 +31,7 @@
  */
 #define CONFIG_OMAP		1	/* in a TI OMAP core */
 #define CONFIG_OMAP34XX		1	/* which is a 34XX */
-#define CONFIG_OMAP3_AM3517CRANE	1	/* working with CRANEBOARD */
+#define CONFIG_OMAP3_AM3517SOMIQ	1	/* working with SomIQ-AM35 */
 
 #define CONFIG_EMIF4	/* The chip has EMIF4 controller */
 
@@ -88,7 +88,7 @@
  */
 #define CONFIG_CONS_INDEX		3
 #define CONFIG_SYS_NS16550_COM3		OMAP34XX_UART3
-#define CONFIG_SERIAL3			3	/* UART3 on CRANEBOARD */
+#define CONFIG_SERIAL3			3	/* UART3 on OMAP3 */
 
 /* allow to overwrite serial and ethaddr */
 #define CONFIG_ENV_OVERWRITE
@@ -139,7 +139,7 @@
 #define CONFIG_USBD_VENDORID		0x0451
 #define CONFIG_USBD_PRODUCTID		0x5678
 #define CONFIG_USBD_MANUFACTURER	"Texas Instruments"
-#define CONFIG_USBD_PRODUCT_NAME	"AM3517CRANE"
+#define CONFIG_USBD_PRODUCT_NAME	"AM3517SOMIQ"
 #endif /* CONFIG_MUSB_UDC */
 
 #endif /* CONFIG_USB_AM35X */
