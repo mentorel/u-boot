@@ -358,6 +358,12 @@
 #define CONFIG_SYS_MMC_SD_FAT_BOOT_PARTITION	1
 #define CONFIG_SPL_FAT_LOAD_PAYLOAD_NAME	"u-boot.img"
 
+/* silicon errata: multi block reads on cpu versions 2.1
+ * and older is broken.  only try multi block reads on
+ * versions after 2.1
+ */
+#define CONFIG_SYS_MMC_MAX_BLK_COUNT	1 
+
 #define CONFIG_SPL_LIBCOMMON_SUPPORT
 #define CONFIG_SPL_LIBDISK_SUPPORT
 #define CONFIG_SPL_I2C_SUPPORT
@@ -393,7 +399,7 @@
  * header. That is 0x800FFFC0--0x80100000 should not be used for any
  * other needs.
  */
-#define CONFIG_SYS_TEXT_BASE		0x80008000
+#define CONFIG_SYS_TEXT_BASE		0x80100000
 #define CONFIG_SYS_SPL_MALLOC_START	0x80208000
 #define CONFIG_SYS_SPL_MALLOC_SIZE	0x100000
 
