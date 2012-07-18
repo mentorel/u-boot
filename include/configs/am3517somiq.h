@@ -186,10 +186,11 @@
 							/* to access */
 							/* nand at CS0 */
 
-#ifdef NAND_16BIT
-#define GPMC_NAND_ECC_LP_x16_LAYOUT	1
-#else
+#define NAND_8BIT
+#ifdef NAND_8BIT
 #define GPMC_NAND_ECC_LP_x8_LAYOUT	1
+#else
+#define GPMC_NAND_ECC_LP_x16_LAYOUT	1
 #endif
 
 #define CONFIG_SYS_MAX_NAND_DEVICE	1		/* Max number of */

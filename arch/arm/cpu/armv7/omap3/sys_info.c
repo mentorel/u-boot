@@ -190,10 +190,10 @@ u32 get_gpmc0_base(void)
  *******************************************************************/
 u32 get_gpmc0_width(void)
 {
-#ifdef NAND_16BIT
-	return WIDTH_16BIT;
-#else
+#ifdef NAND_8BIT
 	return WIDTH_8BIT;
+#else
+	return WIDTH_16BIT;
 #endif
 }
 
